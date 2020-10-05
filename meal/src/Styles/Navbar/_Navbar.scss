@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: $shadeoff-primary;
+
+  .navbar__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $shadeoff-primary;
+
+    .navbar__item {
+      list-style: none;
+      margin-right: 20px;
+      text-decoration: none;
+      transition: transform 500ms;
+
+      li {
+        color: #c5c5c5;
+      }
+
+      &:last-child {
+        background: $action-button;
+        padding: 10px 20px;
+        border-radius: 20px;
+        li {
+          color: #fff;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
