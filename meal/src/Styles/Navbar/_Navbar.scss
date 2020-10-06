@@ -34,6 +34,14 @@
       &:hover {
         transform: scale(1.1);
       }
+
+      .current__link {
+        color: $off-green;
+      }
+    }
+
+    //Media Queries For Mobile and Tablets
+    @media screen and (max-width: 960px) {
     }
   }
 }

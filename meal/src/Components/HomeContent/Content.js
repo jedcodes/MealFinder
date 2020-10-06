@@ -22,6 +22,24 @@ const Content = () => {
       <div className="content__card--one">
         <div className="card__text">
           <h4>Popular Recipes</h4>
+          <li className="card__items">
+            <p>
+              Fish Burger....................1H <br />{" "}
+              <span>SALMA, PERSILLE, SALT, SENNEP</span>
+            </p>
+          </li>
+          <li className="card__items">
+            <p>
+              Fish Burger....................1H <br />{" "}
+              <span>SALMA, PERSILLE, SALT, SENNEP</span>
+            </p>
+          </li>
+          <li className="card__items">
+            <p>
+              Fish Burger....................1H <br />{" "}
+              <span>SALMA, PERSILLE, SALT, SENNEP</span>
+            </p>
+          </li>
         </div>
         <div className="card__image">
           <img src={imgOne} alt="" />
@@ -30,6 +48,30 @@ const Content = () => {
       <div className="content__card--two">
         <div className="card__text">
           <h4>Popular Drinks</h4>
+          <li className="card__items">
+            <p>
+              Red Wine....................1H <br />{" "}
+              <span>
+                Calcium carbonate, Flavours, Grape juice, Non-vegan material
+              </span>
+            </p>
+          </li>
+          <li className="card__items">
+            <p>
+              White Wine....................1H <br />{" "}
+              <span>
+                Calcium carbonate, Flavours, Grape juice, Non-vegan material
+              </span>
+            </p>
+          </li>
+          <li className="card__items">
+            <p>
+              Rose Wine....................1H <br />{" "}
+              <span>
+                Calcium carbonate, Flavours, Grape juice, Non-vegan material
+              </span>
+            </p>
+          </li>
         </div>
         <div className="card__image">
           <img src={imgTwo} alt="" />

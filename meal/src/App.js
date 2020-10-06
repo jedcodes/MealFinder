@@ -3,6 +3,7 @@ import "./Styles/_styles.scss";
 import { Route, Switch } from "react-router-dom";
 import { Breakfast, Dinner, Drinks, Home, Lunch } from "./Pages";
 import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route exact path="/dinner" component={Dinner} />
         <Route exact path="/drinks" component={Drinks} />
       </Switch>
+      <Footer />
     </div>
   );
 };
