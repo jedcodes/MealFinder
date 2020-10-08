@@ -10,26 +10,42 @@ const Navbar = () => {
   const closeMobileMenu = () => setClick(!click);
 
   return (
-    <nav className="navbar">
-      <div className="navbar__header">
-        <h1>MEAL PLANER</h1>
-        <div className="navbar__mobileIcon" onClick={clickHandler}>
+    <React.Fragment>
+      <header>
+        <h1 className="logo">Meal Planer</h1>
+        <div className="burger" onClick={clickHandler}>
           {click ? <RiCloseLine /> : <RiMenu3Fill />}
         </div>
-      </div>
-
-      <ul className={click ? "navbar__menu active" : "navbar__menu"}>
-        {MenuItems.map((item, index) => {
-          return (
-            <li key={index} onClick={closeMobileMenu}>
-              <Link className={item.cName} to={item.url}>
-                {item.title}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+        <nav>
+          <ul className={click ? "nav__menu active" : "nav__menu"}>
+            {MenuItems.map((item, index) => {
+              return (
+                <li key={index} onClick={closeMobileMenu}>
+                  <Link to={item.url}>{item.title}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <div className="background"></div>
+        <div className="section__content">
+          <h1>Meal Of The Day</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At laborum
+            omnis, tempora quidem accusamus minus ad soluta ipsa cumque,
+            necessitatibus eius, iste amet recusandae! Doloremque repellat aut
+            nobis necessitatibus voluptatem?
+          </p>
+          <div className="section__button">
+            <Link className="section__link" to="/">
+              View More
+            </Link>
+          </div>
+        </div>
+      </section>
+    </React.Fragment>
   );
 };
 

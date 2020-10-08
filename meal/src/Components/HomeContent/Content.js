@@ -20,6 +20,9 @@ const Content = () => {
       </div>
 
       <div className="content__card--one">
+        <div className="card__image">
+          <img src={imgOne} alt="" />
+        </div>
         <div className="card__text">
           <h4>Popular Recipes</h4>
           <li className="card__items">
@@ -41,11 +44,11 @@ const Content = () => {
             </p>
           </li>
         </div>
-        <div className="card__image">
-          <img src={imgOne} alt="" />
-        </div>
       </div>
       <div className="content__card--two">
+        <div className="card__image">
+          <img src={imgTwo} alt="" />
+        </div>
         <div className="card__text">
           <h4>Popular Drinks</h4>
           <li className="card__items">
@@ -72,9 +75,6 @@ const Content = () => {
               </span>
             </p>
           </li>
-        </div>
-        <div className="card__image">
-          <img src={imgTwo} alt="" />
         </div>
       </div>
     </div>

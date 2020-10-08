@@ -1,29 +1,156 @@
-.navbar {
-  position: relative;
+header {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   background-color: $shadeoff-primary;
-  height: 50px;
+  padding: 20px;
+}
 
-  .navbar__header {
-    position: absolute;
-    top: 10px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-content: center;
-    padding: 0 10px;
+.logo {
+  display: flex;
+  font-size: 1.5em;
+}
 
-    .navbar__mobileIcon {
-      font-size: 1.5em;
-    }
+nav ul {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  padding: 16px;
+  background: $shadeoff-primary;
+  left: -100%;
+  transition: all 0.5s;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 16px;
+  margin-left: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  transform: scale(1.08);
+  transition: ease-in 0.1s;
+}
+
+.nav__menu.active {
+  left: 0;
+}
+
+.burger {
+  position: absolute;
+  font-size: 35px;
+  color: white;
+  text-shadow: 2px 2px 4px rgb(31, 31, 31);
+  top: 0;
+  right: 0;
+  margin-right: 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu.active a {
+  opacity: 1;
+}
+
+/* Desktop Screen Format */
+
+@media screen and (min-width: $medium) {
+  .burger {
+    display: none;
   }
 
-  .navbar__menu {
-    position: absolute;
-    top: 50px;
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(700px, 3fr);
+  }
+
+  nav {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    grid-column: 3/4;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    all: unset;
     list-style: none;
-    padding-left: 0;
+    display: flex;
+  }
+
+  nav li {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+
+  nav a {
+    opacity: 1;
+  }
+}
+
+/* Section Design */
+
+section {
+  background-image: url("https://images.unsplash.com/photo-1547573854-74d2a71d0826?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: rgba(49, 49, 49, 0.829);
+  position: absolute;
+}
+
+.section__content {
+  z-index: 1;
+  text-align: left;
+  max-width: 500px;
+  position: absolute;
+  left: 30px;
+  margin-top: 50px;
+}
+
+section h1 {
+  color: $off-green;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+section p {
+  color: white;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.section__button {
+  background: $action-button;
+  width: 30%;
+  border: 1px solid #000;
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 30px;
+
+  .section__link {
+    text-decoration: none;
+    color: #fff;
   }
 }
