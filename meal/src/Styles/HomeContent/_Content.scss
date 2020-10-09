@@ -74,7 +74,14 @@
   }
 
   @media screen and (min-width: $medium) {
-    margin: 0 auto;
-    width: 60%;
+    margin: 30px auto 0 auto;
+    width: 80%;
+    max-width: 1300px;
+
+    .content__info {
+      width: 600px;
+      text-align: centers;
+      margin: 0 auto;
+    }
   }
 }

@@ -5,9 +5,10 @@ import imgTwo from "../../images/placeholderTwo.png";
 const Content = () => {
   return (
     <div className="content">
-      <h2>Dont eat less - just eat real</h2>
+      
 
       <div className="content__info">
+      <h2>Dont eat less - just eat real</h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quo
           dolorem inventore quibusdam nihil, laudantium eius, sunt repellendus,
