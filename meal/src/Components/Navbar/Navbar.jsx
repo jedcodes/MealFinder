@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { RiMenu3Fill, RiCloseLine } from "react-icons/ri";
 import { MenuItems } from "./MenuItems";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const location = useLocation()
 
   const clickHandler = () => setClick(!click);
   const closeMobileMenu = () => setClick(!click);
@@ -28,7 +29,7 @@ const Navbar = () => {
           </ul>
         </nav>
       </header>
-      <section>
+     {location.pathname === '/' && <section>
         <div className="background"></div>
         <div className="section__content">
           <h1>Meal Of The Day</h1>
@@ -44,7 +45,7 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section>}
     </React.Fragment>
   );
 };

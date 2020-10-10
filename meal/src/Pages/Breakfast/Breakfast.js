@@ -2,7 +2,7 @@ import React from "react";
 
 const Breakfast = () => {
   return (
-    <div>
+    <div className="breakfast">
       <h1>Breakfast Page!!</h1>
     </div>
   );

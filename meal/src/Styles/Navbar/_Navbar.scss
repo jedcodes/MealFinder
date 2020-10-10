@@ -71,6 +71,7 @@ nav a:hover {
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(700px, 3fr);
+    align-items: center;
   }
 
   nav {
@@ -87,12 +88,13 @@ nav a:hover {
   }
 
   nav li {
-    margin-bottom: 0;
+    margin-bottom: 10px;
     margin-right: 16px;
   }
 
   nav a {
     opacity: 1;
+    font-size: 20px;
   }
 }
 
